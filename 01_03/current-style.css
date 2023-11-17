@@ -13,6 +13,10 @@
   list-style: none;
   margin: 1rem;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem 0.5rem;
+  grid-auto-flow: dense;
 }
 
 .grid li {
@@ -22,6 +26,13 @@
   align-items: center;
 }
 
+/* .li {
+  text-align: center;
+} */
+
 li.featured {
   border-color: purple;
+  grid-row: span 2;
+/*   grid-column: 2; */
+/*   grid-area: featured; */
 }
