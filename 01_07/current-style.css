@@ -1,5 +1,6 @@
 :root {
   --content-width: 50ch;
+  --indent: calc((-1)*(100vw - var(--content-width))/4)
 }
 
 body {
@@ -36,12 +37,16 @@ blockquote p {
   .pull-start {
     float: left;
     float: inline-start;
+    margin-inline-start: min(var(--indent),0px);
+    writing-mode: horizontal-tb;
     margin-inline-end: 3rem;
+    background-color: red;
   }
 
   .pull-end {
     float: right;
     float: inline-end;
     margin-inline-start: 3rem;
+    margin-inline-end: min(var(--indent),0px);
   }
 }
